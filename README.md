@@ -1,6 +1,6 @@
 # Smart AdServer — Android Instream SDK Content Player Plugins
 
-This repository contains implementations of the '''SVSContentPlayerPlugin''' interface needed by _Smart Android Instream SDK_
+This repository contains implementations of the ```SVSContentPlayerPlugin``` interface needed by _Smart Android Instream SDK_
 for some majors content video SDKs for Android :
 
 - ExoPlayer
@@ -10,8 +10,8 @@ for some majors content video SDKs for Android :
 - Android legacy VideoView
 
 They connect the _Smart Android Instream SDK_ with the corresponding content player on which the ad is to be displayed.
-Broadly speaking, they respond to callbacks (typically adBreakStarted and adBreakEnded() methods when the content needs to be paused),
-provide playback information (getContentDuration, getCurrentPosition, isPlaying) to the instream SDK and also return the ViewGroup
+Broadly speaking, they respond to callbacks (typically ```adBreakStarted``` and ```adBreakEnded``` methods when the content needs to be paused),
+provide playback information (```getContentDuration```, ```getCurrentPosition```, ```isPlaying```) to the instream SDK and also return the ```ViewGroup```
 containing the content player for proper ad display on top.
 
 
