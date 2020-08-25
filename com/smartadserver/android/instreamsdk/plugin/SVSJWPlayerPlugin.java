@@ -13,6 +13,10 @@ import com.smartadserver.android.instreamsdk.SVSContentPlayerPlugin;
 
 /**
  * Implementation of the {@link SVSContentPlayerPlugin} interface for JW player.
+ * Note that the JWPlayer SDK is currently supported up to 2.7.13 version.
+ * Later releases (2.8+) integrate Exoplayer v2 that currently conflicts with externally imported Exoplayer v2 
+ * required by Smart instream SDK
+ *
  * source : https://github.com/smartadserver/smart-instream-android-plugins/
  */
 public class SVSJWPlayerPlugin implements SVSContentPlayerPlugin {
