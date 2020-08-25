@@ -3,8 +3,8 @@
 This repository contains implementations of the ```SVSContentPlayerPlugin``` interface needed by _Smart Android Instream SDK_
 for some majors content video SDKs for Android :
 
-- ExoPlayer ⃰
-- JWPlayer ⃰
+- ExoPlayer
+- JWPlayer *
 - Brightcove
 - Ooyala
 - Android legacy VideoView
