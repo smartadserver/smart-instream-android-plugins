@@ -14,8 +14,7 @@ Broadly speaking, they respond to callbacks (typically ```adBreakStarted``` and 
 provide playback information (```getContentDuration```, ```getCurrentPosition```, ```isPlaying```) to the instream SDK and also return the ```ViewGroup```
 containing the content player for proper ad display on top.
 
-⃰ Note that the JWPlayer SDK is currently supported up to 2.7.13 version.
-Later releases (2.8+) integrate Exoplayer v2 that currently conflicts with externally imported Exoplayer v2 required by Smart instream SDK.
+⃰Note that the JWPlayer SDK is currently supported up to 3.19.0 version through the SVSJWPlayerPlugin. For legacy JWPlayer version 2.x, please use a previous plugin release.
 
 
 ## Requirements
