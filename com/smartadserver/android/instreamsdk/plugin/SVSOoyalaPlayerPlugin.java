@@ -5,6 +5,8 @@ import android.os.Looper;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+
 import com.ooyala.android.OoyalaNotification;
 import com.ooyala.android.OoyalaPlayer;
 import com.ooyala.android.OoyalaPlayerLayout;
@@ -19,9 +21,13 @@ import java.util.Observer;
  */
 public class SVSOoyalaPlayerPlugin implements SVSContentPlayerPlugin {
 
+    @NonNull
     private Handler mainHandler;
+    @NonNull
     private ViewGroup contentPlayerContainer;
+    @NonNull
     private OoyalaPlayer ooyalaPlayer;
+    @NonNull
     private OoyalaPlayerLayout ooyalaPlayerLayout;
     private boolean isLiveContent;
     boolean contentHasCompleted;
@@ -32,7 +38,7 @@ public class SVSOoyalaPlayerPlugin implements SVSContentPlayerPlugin {
      * @param ooyalaPlayerLayout the OoyalaPlayerLayout object
      * @param contentPlayerContainer the ViewGroup containing the OoyalaPlayerLayout object
      */
-    public SVSOoyalaPlayerPlugin(final OoyalaPlayer ooyalaPlayer, OoyalaPlayerLayout ooyalaPlayerLayout, ViewGroup contentPlayerContainer, boolean isLiveContent) {
+    public SVSOoyalaPlayerPlugin(@NonNull final OoyalaPlayer ooyalaPlayer, @NonNull OoyalaPlayerLayout ooyalaPlayerLayout, @NonNull ViewGroup contentPlayerContainer, boolean isLiveContent) {
         this.mainHandler = new Handler(Looper.getMainLooper());
         this.ooyalaPlayer = ooyalaPlayer;
         this.ooyalaPlayerLayout = ooyalaPlayerLayout;
@@ -113,6 +119,11 @@ public class SVSOoyalaPlayerPlugin implements SVSContentPlayerPlugin {
         return isLiveContent ? -1 : ooyalaPlayer.getDuration();
     }
 
+    @Override
+    public float getContentPlayerVolumeLevel() {
+        return ooyalaPlayer.getVolume();
+    }
+
     /**
      * Returns the current position in the content media
      */
@@ -125,6 +136,7 @@ public class SVSOoyalaPlayerPlugin implements SVSContentPlayerPlugin {
      * Returns the {@link ViewGroup} component that contains the content player
      */
     @Override
+    @NonNull
     public ViewGroup getContentPlayerContainer() {
         return contentPlayerContainer;
     }
