@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.media3.exoplayer.ExoPlayer;
 
-import com.google.android.exoplayer2.ExoPlayer;
 import com.smartadserver.android.instreamsdk.SVSContentPlayerPlugin;
 
 import java.util.concurrent.Callable;
@@ -104,11 +104,7 @@ public class SVSExoPlayerPlugin implements SVSContentPlayerPlugin {
 
     @Override
     public float getContentPlayerVolumeLevel() {
-        float volumeLevel = 0;
-        if (exoPlayer.getAudioComponent() != null) {
-            volumeLevel = exoPlayer.getAudioComponent().getVolume();
-        }
-        return volumeLevel;
+        return exoPlayer.getVolume();
     }
 
     /**
